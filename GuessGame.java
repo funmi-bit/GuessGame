@@ -1,0 +1,25 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.guessgame;
+
+/**
+ *
+ * @author HP
+ */
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+// Subject class
+final class GuessGame {
+    private final List<GuessObserver> observers = new ArrayList<>();
+    private final Random random = new Random();
+    private int targetNumber;
+    private int attemptsLeft;
+    private GameState state;
+
+    GuessGame() {
+        reset();
+    }
