@@ -8,10 +8,15 @@ package com.mycompany.guessgame;
  *
  * @author HP
  */
-// Concrete state
+
 class LostState implements GameState {
     private final GuessGame game;
 
     LostState(GuessGame game) {
         this.game = game;
     }
+    @Override
+    public void handleGuess(int guess) {
+        
+    }
+}

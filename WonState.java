@@ -8,7 +8,6 @@ package com.mycompany.guessgame;
  *
  * @author HP
  */
-// Concrete state
 class WonState implements GameState {
     private final GuessGame game;
 
@@ -18,6 +17,6 @@ class WonState implements GameState {
 
     @Override
     public void handleGuess(int guess) {
-        // No need to handle guesses in the WonState
+     
     }
 }

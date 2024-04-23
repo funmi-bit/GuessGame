@@ -33,3 +33,29 @@ final class GuessGame {
     void addObserver(GuessObserver observer) {
         observers.add(observer);
     }
+    void notifyObservers(String message) {
+        for (GuessObserver observer : observers) {
+            observer.update(message);
+        }
+    }
+
+    int getTargetNumber() {
+        return targetNumber;
+    }
+
+    int getAttemptsLeft() {
+        return attemptsLeft;
+    }
+
+    void decrementAttemptsLeft() {
+        attemptsLeft--;
+    }
+
+    void setState(GameState state) {
+        this.state = state;
+    }
+
+    void handleGuess(int guess) {
+        state.handleGuess(guess);
+    }
+}
