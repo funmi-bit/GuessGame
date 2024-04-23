@@ -23,3 +23,13 @@ final class GuessGame {
     GuessGame() {
         reset();
     }
+    void reset() {
+        targetNumber = random.nextInt(100) + 1;
+        attemptsLeft = 10;
+        state = new PlayingState(this);
+        notifyObservers("New game started. You have " + attemptsLeft + " attempts left.");
+    }
+
+    void addObserver(GuessObserver observer) {
+        observers.add(observer);
+    }
