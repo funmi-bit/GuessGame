@@ -23,6 +23,7 @@ final class GuessGame {
     GuessGame() {
         reset();
     }
+
     void reset() {
         targetNumber = random.nextInt(100) + 1;
         attemptsLeft = 10;
@@ -33,6 +34,7 @@ final class GuessGame {
     void addObserver(GuessObserver observer) {
         observers.add(observer);
     }
+
     void notifyObservers(String message) {
         for (GuessObserver observer : observers) {
             observer.update(message);
